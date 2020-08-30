@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="test">
+  <select id="queryUserById" resultType="com.mybatis.po.User" parameterType="int">
+    select *from user where id=#{id}
+ </select>
+ 
+ <select id="selectUserByNameLike" parameterType="string" resultType="com.mybatis.po.User" >
+   select *from user where userName like #{userName}
+ </select>
+ 
+ <select id="selectUserByNameLike2" parameterType="string" resultType="com.mybatis.po.User" >
+   select *from user where userName like   '%${value}%'
+ </select>
+ <!--删除用户 -->
+  <delete id="deleteUserId" parameterType="int">
+  delete from  user where id =#{id}
+  </delete>
+  <!-- 修改用户 -->
+ <update id="updateUser" parameterType="com.mybatis.po.User" >
+ update user set username=#{username}  where  id =#{id}
+ </update>
+ 
+ <!--插入一条数据  -->
+ <insert id="inserUser" parameterType="com.mybatis.po.User">
+ <selectKey keyProperty="id" resultType="int" order="AFTER"  >
+ select  last_insert_id()
+ </selectKey>
+ insert into  user (username,sex,address) value(#{username},#{sex},#{address});
+ </insert>
+ 
+ 
+ </mapper>
