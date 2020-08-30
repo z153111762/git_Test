@@ -20,7 +20,7 @@ public interface UserMapper {
    //根据用户id删除用户信息
    public void deleteUserByUserId(int id);
    //新增用户信息
-   public void saveUserInfo(User usersssssss);
+   public void saveUserInfo(User usersssssss1111);
    //根据用户id更新用户信息
    public void updateUserInfoByUserId(User user);
 	
