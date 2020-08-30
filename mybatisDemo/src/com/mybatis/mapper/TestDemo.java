@@ -2,6 +2,6 @@ package com.mybatis.mapper;
 
 public class TestDemo {
  public static void main(String[] args) {
-	System.out.println("我又提ddddd交ddddddddddddddddddddddddddddddddddddddddddddddd啦");
+	System.out.println("我又提ddddd交dddddddddddddddddddddddfffdddddddddddddddddddddddd啦");
 }
 }
