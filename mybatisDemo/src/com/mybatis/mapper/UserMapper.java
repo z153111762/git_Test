@@ -16,7 +16,7 @@ public interface UserMapper {
    //查询所有用户
    public List<User>  getUserAll();
    //根据用于姓名模糊查询
-   public List<User> queryUserLikeByName(String userName);
+   public List<User> queryUserLikeByName(String userNddame);
    //根据用户id删除用户信息
    public void deleteUserByUserId(int id);
    //新增用户信息
